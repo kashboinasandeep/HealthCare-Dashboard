@@ -1,0 +1,62 @@
+.activity-feed {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.activity-summary {
+  margin-bottom: 20px;
+}
+
+.appointment-count {
+  font-size: 0.95rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.activity-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 150px;
+  padding-top: 20px;
+}
+
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.chart-bar {
+  width: 8px;
+  background-color: #0d6efd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: height 0.3s ease;
+}
+
+.chart-label {
+  font-size: 0.8rem;
+  color:  #f8f9fa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .activity-feed {
+    padding: 15px;
+  }
+  
+  .activity-chart {
+    height: 120px;
+  }
+}

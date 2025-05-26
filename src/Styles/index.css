@@ -1,0 +1,72 @@
+/* Global styles for the Healthcare Dashboard */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+:root {
+  --primary-color: #4a6bfd;
+  --secondary-color: #f5f7fb;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-light: #999;
+  --healthy-green: #4caf50;
+  --warning-red: #f44336;
+  --sidebar-width: 240px;
+  --header-height: 70px;
+  --border-radius: 12px;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: #f5f7fb;
+  color: var(--text-primary);
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 20px;
+  padding-top: calc(var(--header-height) + 20px);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .main-content {
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .header-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-search {
+    display: none;
+  }
+  
+  .calendar-container {
+    overflow-x: auto;
+  }
+}

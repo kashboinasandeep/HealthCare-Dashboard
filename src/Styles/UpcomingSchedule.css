@@ -1,0 +1,41 @@
+.upcoming-schedule {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  margin-bottom: 25px;
+  width: 50%;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.schedule-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.day-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.day-appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .upcoming-schedule {
+    padding: 15px;
+  }
+}

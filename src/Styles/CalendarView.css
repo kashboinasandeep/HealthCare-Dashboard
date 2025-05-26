@@ -1,0 +1,171 @@
+.calendar-view {
+  padding: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar-nav-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #6c757d;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.calendar-day-header {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-light);
+  padding-bottom: 10px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+}
+
+.calendar-day.has-appointment {
+  background-color: rgba(74, 107, 253, 0.1);
+}
+
+.day-number {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.appointment-times {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+}
+
+.appointment-time {
+  font-size: 0.7rem;
+  color: var(--primary-color);
+  background-color: rgba(74, 107, 253, 0.2);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.upcoming-appointments {
+  margin-top: 20px;
+}
+
+.subsection-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.appointment-cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.appointment-card {
+  min-width: 200px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--primary-color);
+}
+
+.appointment-card-content {
+  padding: 15px;
+}
+
+.appointment-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0d6efd ;
+  margin-bottom: 5px;
+}
+
+.appointment-doctor {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.appointment-time-info {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.appointment-time {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0d6efd ;
+  margin-bottom:10px;
+}
+
+.appointment-date {
+  font-size: 0.75rem;
+  color: #f8f9fa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .calendar-grid {
+    gap: 5px;
+  }
+  
+  .calendar-day {
+    padding: 5px;
+  }
+  
+  .appointment-cards {
+    flex-direction: column;
+  }
+  
+  .appointment-card {
+    min-width: auto;
+  }
+}

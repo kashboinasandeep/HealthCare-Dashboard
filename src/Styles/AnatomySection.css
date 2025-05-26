@@ -1,0 +1,116 @@
+.anatomy-section {
+  flex: 1;
+  padding: 25px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.anatomy-visualization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+ 
+}
+
+.human-body-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.human-body-placeholder {
+  position: relative;
+  height: 350px;
+  width: 150px;
+}
+
+.body-silhouette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(74, 107, 253, 0.1);
+  border-radius: 60px 60px 0 0;
+  clip-path: polygon(
+    30% 0%, 70% 0%, 
+    90% 10%, 90% 30%, 
+    100% 40%, 100% 60%, 
+    90% 70%, 90% 85%, 
+    70% 100%, 30% 100%, 
+    10% 85%, 10% 70%, 
+    0% 60%, 0% 40%, 
+    10% 30%, 10% 10%
+  );
+}
+
+.health-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+ 
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.health-indicator.green .indicator-dot {
+  background-color: green;
+}
+
+.health-indicator.red .indicator-dot {
+  background-color:red;
+}
+
+.health-indicator.yellow .indicator-dot {
+  background-color: #ffc107;
+}
+
+.indicator-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.part-name {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.part-status {
+  font-size: 0.7rem;
+  color: #6c757d;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .anatomy-visualization {
+    height: 300px;
+  }
+  
+  .human-body-placeholder {
+    height: 250px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anatomy-section {
+    padding: 15px;
+  }
+}

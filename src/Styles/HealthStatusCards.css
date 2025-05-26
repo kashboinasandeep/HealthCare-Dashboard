@@ -1,0 +1,87 @@
+.health-status-cards {
+  flex: 1;
+  padding: 25px;
+  background-color: #f9fafc;
+  border-left: 1px solid #eee;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.status-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.status-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.status-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-dot.green {
+  background-color: green;
+}
+
+.status-dot.red {
+  background-color: red;
+}
+
+.status-dot.yellow {
+  background-color: #ffc107;
+}
+
+.status-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .health-status-cards {
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-status-cards {
+    padding: 15px;
+  }
+}
